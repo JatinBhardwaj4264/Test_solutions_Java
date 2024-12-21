@@ -1,0 +1,50 @@
+Factorial using recursion 
+Write a recursive function factorial that accepts an integer n as a parameter and returns the factorial of n, or n!.
+A factorial of an integer is defined as the product of all integers from 1 through that integer inclusive.For example, the call of factorial(4) should return 1 * 2 * 3 * 4, or 24. The factorial of 0 and 1 are defined to be 1.
+You may assume that the value passed is non-negative and that its factorial can fit in the range of type int.
+
+Input Format:
+
+The first line of input contains number of testcases , T.
+Then T lines follow, which contains an integer,n.
+Output Format:
+For each testcase print the factorial in new line
+Sample Input
+
+2
+4
+3
+Sample Output
+
+24
+6
+
+===================================================================================================================================================================================================================
+
+#include <stdio.h>
+/*
+ * Complete the function 'factorial' given below
+ * @params
+ *  n -> an integer whose factorial is to be calculated
+ * @return
+ *  The factorial of integer n
+ */
+int factorial(int n) {
+  // Write your code here
+    if(n==0||n==1)
+    {
+        return 1;
+    }
+    return n*factorial(n-1);
+}
+int main()
+{
+   int T, no;
+   scanf("%d",&T);
+   while(T--)
+   {
+     scanf("%d",&no);
+     printf("%d\n",factorial(no));
+   }
+ return 0;
+}
