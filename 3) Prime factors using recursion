@@ -1,0 +1,40 @@
+Prime factors using recursion 
+Write a program that accepts an integer n (where n >=2) and print all the prime factors of n using recursion.
+
+Sample Input
+24
+Sample Output
+2
+2
+2
+3
+Constraints : Do not declare any global variables. Do not use any loops; you must use recursion. You can declare as many primitive variables like ints as you like. You are allowed to define other "helper" functions if you like; they are subject to these same constraints.
+
+=====================================================================================================================================================================================================================
+
+import java.util.Scanner;
+// Other imports go here
+// Do NOT change the class name
+class Main{
+    public static void primeFactor(int n)
+    {
+       primeFactorHelp(n,2);
+    }
+    public static void primeFactorHelp(int n, int divisor)
+    {
+        if(n<2)
+            return;
+        if(n%divisor==0)
+        {System.out.println(divisor);
+            primeFactorHelp(n/divisor,divisor);}
+        else
+             primeFactorHelp(n, divisor+1);
+    }
+    public static void main(String[] args)
+    {
+        // Write your code here
+       Scanner in = new Scanner(System.in);
+        int n= in.nextInt();
+            primeFactor(n);
+    }
+}
