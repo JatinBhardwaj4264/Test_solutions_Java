@@ -1,0 +1,35 @@
+Form a new number 
+Write a recursive function evenDigits that accepts an integer parameter n and returns a new integer containing only the even digits from n, in the same order. If n does not contain any even digits, return 0.
+
+For example, the call of evenDigits(8342116) should return 8426 and the call of evenDigits(35179) should return 0.
+
+====================================================================================================================================================================================================================
+
+import java.util.Scanner;
+// Other imports go here
+// Do NOT change the class name
+class Main{
+    
+    public static int evenDigits(int n)
+    {
+        if(n==0)
+            return 0;
+        int last_digit=n%10;
+        if(last_digit%2==0)
+            return ((evenDigits(n/10)*10)+last_digit);
+        else
+            return evenDigits(n/10);
+    }
+    
+    public static void main(String[] args)
+    {
+        // Write your code here
+        Scanner in = new Scanner(System.in);
+        int t= in.nextInt();
+        while(t-->0)
+        {
+            int num = in.nextInt();
+            System.out.println(evenDigits(num));
+         }
+    }
+}
