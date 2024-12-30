@@ -1,0 +1,45 @@
+Greatest common divisor using recursion 
+Write a recursive function gcd that accepts two positive non-zero integer parameters i and j and returns the greatest common divisor of these numbers.
+
+Sample Input
+
+2 // Test Cases
+30 18  // i j (testcase 1)
+11 17  // i j (testcase 2)﻿
+Sample Output
+
+6
+1
+Constraints:. Solve the problem recursively.
+
+=====================================================================================================================================================================================================================
+
+import java.util.Scanner;
+class Result
+{
+  static int gcd(int i, int j)
+  {
+      if(j==0)
+          return i;
+      int remainder = i%j;
+      i=j;
+      j=remainder;
+      return gcd(i,j);
+  }
+}
+class Main
+{
+  public static void main(String[] args)
+  {
+    int t, a, b;
+    Scanner s=new Scanner(System.in);
+    t=s.nextInt();
+    while(t != 0)
+    {
+      a=s.nextInt();
+      b=s.nextInt();
+      System.out.println(Result.gcd(a, b));
+      t--;
+    }
+  }
+}
