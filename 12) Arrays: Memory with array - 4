@@ -1,0 +1,24 @@
+Arrays: Memory with array - 4 
+What will be the output of following program?
+
+#include<stdio.h>
+int arr[ ] = {1, 2, 3, 4};
+int count;    
+int incr() 
+{
+	return ++count;
+}
+int main () 
+{ 
+	arr[count++]= incr();
+	printf (“%d”,  arr[count]); 
+	return 0;
+}
+
+================================================================================================================================================================
+
+Your Answer
+  1
+  2
+@ 3
+  4
