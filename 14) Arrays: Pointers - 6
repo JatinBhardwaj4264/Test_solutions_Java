@@ -1,0 +1,20 @@
+Arrays: Pointers - 6 
+What will be the output of below program?
+
+#include<stdio.h>
+int main()
+{
+ int arr[3] = {11, 12, 13};
+ int *ptr = arr;
+ int **r = &ptr;
+ printf("%p %p", *r, arr);
+ return 0;
+}
+
+============================================================================================================================================================================
+
+Choose any one
+    Two different addresses will be printed
+    12
+&   Two Same address will be printed
+    11
