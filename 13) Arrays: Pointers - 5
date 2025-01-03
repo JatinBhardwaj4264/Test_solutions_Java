@@ -1,0 +1,20 @@
+Arrays: Pointers - 5 
+What is the output of below program?
+
+#include<stdio.h>
+int main()
+{
+ int a[3] = {11, 12, 13};
+ int *ptr = a;
+ int *r = &ptr;
+ printf("%d", (**r));
+ return 0;
+}
+
+============================================================================================================================================================================================
+
+Choose any one
+   11
+   12
+&  Syntax error
+   No output
